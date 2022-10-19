@@ -3,8 +3,8 @@ This is a .bat file that contains a Python script. If a Python interpreter is av
 
 Try running it both ways in cmd.exe:
 
-  > you-need-python-stub
-  > py you-need-python-stub.bat
+    > you-need-python-stub
+    > py you-need-python-stub.bat
 
 Both ways the output is "Hello, this is my python code!". 
 
