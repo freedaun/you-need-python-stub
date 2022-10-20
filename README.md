@@ -21,7 +21,6 @@ version also executes a clear screen command (to hide REM ''' output).
 
 ### WTF
 
-All I can say about .bat hacking is: do not ever try this at home. Not even a `\n` character can 
-be typed directly. This scrips also uses some Powershell to do search-n-replace, and no matter how 
-fancy it is supposed to be, what a big disappointment that was. In this trade there are always new 
-lows. 
+All I can say about shell hacking is: do not ever try this at home. Not even a `\n` character can 
+be typed directly in .bat. This scrips also uses some Powershell to do search-n-replace, and no matter
+how fancy it is supposed to be, what a big disappointment that was. There are always new lows. 
