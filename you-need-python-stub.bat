@@ -1,3 +1,4 @@
+
 REM ='''
 @echo off && powershell -Command "(gc "%~dpnx0" -raw) -replace('[\s].*[\s].*?#-start\-of-Python-code-#[\s\S]+?$','') -replace('(.*)','') | Out-File -encoding ASCII "%TMP%\\pyth0n-stub.py" 
 cls       && powershell -Command "(gc "%~dpnx0" -raw) -replace(      '[\s\S]*#-start\-of-Python-code-#.*','')                            | Out-File -encoding ASCII "%TMP%\\pyth0n-stub.py" -append
@@ -23,6 +24,23 @@ pause >nul  &&  goto :EOF
 #-start-of-python-code-#
 
 
-print("\nHello, this is my python code!")
+import sys
+if len(sys.argv) <= 1:
+    print('''
+  This is Python running! you-need-python-stub allows you to distribute Python scripts 
+  without worrying about the Python installation. Adapt this code to get started, but 
+  leave something similar here to help the user install dependencies. 
+
+  Usage:
+    you-need-python-stub                        # default
+    py you-need-python-stub.bat                 # executed as Python code (fast)
+    
+  Installation:
+    pip install icecream                        # example dependency
+''')
+    exit()
+
+# example import of dependency
+import icecream as ic 
 
 
