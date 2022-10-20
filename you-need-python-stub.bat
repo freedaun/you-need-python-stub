@@ -1,12 +1,11 @@
-
 REM ='''
 @echo off && powershell -Command "(gc "%~dpnx0" -raw) -replace('[\s].*[\s].*?#-start\-of-Python-code-#[\s\S]+?$','') -replace('(.*)','') | Out-File -encoding ASCII "%TMP%\\pyth0n-stub.py" 
-cls       && powershell -Command "(gc "%~dpnx0" -raw) -replace(      '[\s\S]*#-start\-of-Python-code-#.*','')                            | Out-File -encoding ASCII "%TMP%\\pyth0n-stub.py" -append
-py -c "print('')"      && if not errorlevel 0 goto pyfail
+             powershell -Command "(gc "%~dpnx0" -raw) -replace(      '[\s\S]*#-start\-of-Python-code-#.*','')                            | Out-File -encoding ASCII "%TMP%\\pyth0n-stub.py" -append
+py     -c "print('')" 2> NUL  && if not errorlevel 0 goto pyfail
 py     %TMP%\\pyth0n-stub.py  %1 %2 %3 %4 %5 %6 %7 %8 %9  
 goto :EOF
 :pyfail
-python -c "print('')"  && if not errorlevel 0 goto fail
+python -c "print('')" 2> NUL  && if not errorlevel 0 goto fail
 python %TMP%\\pyth0n-stub.py  %1 %2 %3 %4 %5 %6 %7 %8 %9  
 goto :EOF
 :fail
