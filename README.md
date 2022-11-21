@@ -10,10 +10,10 @@ error message will refer to the correct line.
 
 Try running it both ways in cmd.exe:
 
-    > you-need-python-stub                  # the slow way
-    > py you-need-python-stub.bat           # the fast way
+    > you-need-python-stub.py.bat           # the slow way
+    > py you-need-python-stub.py.bat        # the fast way
 
-Both ways the output is "Hello, this is my python code!". The only difference is that the .bat version also executes a clear screen command (to hide REM ''' output). 
+Both ways the output is the same. The only difference is that the .bat version also executes a clear screen command (to hide REM ''' output). 
 
 ### WTF
 
