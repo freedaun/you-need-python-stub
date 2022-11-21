@@ -1,6 +1,6 @@
 # you-need-python-stub
 
-No you don't need python, mostly, but for installers and scripts to be sent to third parties, you might need it. You don't want to expose anyone to shell hackery. So this is a .bat file that serves as a bootloader for a Python script, if Python can be found. If not, it will prompt to install Python. If Python contains pip imports, it will prompt to install them if they are missing. 
+No you don't need python, mostly, but for installers and scripts to be sent to third parties, you want a smooth way to run a Python script. This is a .bat file that serves as a bootloader for a Python script, if Python can be found. If not, it will prompt to install Python. If Python contains pip imports, it will prompt to install them if they are missing. Otherwise, as all conditions for the code to run have been met, it will simply run the Python code. 
 
 The script makes an effort to maintain line-numbers, such that when there is a Python error, the error message will refer to the correct line. 
 
